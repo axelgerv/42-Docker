@@ -1,13 +1,13 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    03                                                 :+:      :+:    :+:    #
+#    12                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: axelgerv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/04/23 13:22:55 by axelgerv          #+#    #+#              #
-#    Updated: 2019/04/23 13:23:04 by axelgerv         ###   ########.fr        #
+#    Created: 2019/04/30 10:39:53 by axelgerv          #+#    #+#              #
+#    Updated: 2019/04/30 15:55:12 by axelgerv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-eval $(docker-machine env Char)
+docker run --detach --name=spawning-pool --env=MYSQL_ROOT_PASSWORD=Kerrigan --volume hatchery --env=MYSQL_DATABASE=zerglings --restart on-failure mysql
